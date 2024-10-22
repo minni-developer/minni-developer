@@ -1,0 +1,350 @@
+/* Basic Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VS Code Dark Theme */
+.vscode-theme {
+  display: flex;
+  min-height: 100vh;
+  max-height: 200vh;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #080808; /* Keep this */
+  color: #D4D4D4; /* Keep this */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #0a0a0a; /* Keep this */
+  padding: 20px;
+  border-right: 1px solid #3C3D37;
+}
+
+.sidebar-header a:hover {
+  color: #36BA98;
+  text-decoration: none;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  text-align: center ;
+}
+
+.sidebar-header h2,a {
+  font-size: 22px;
+  color: #FF8A8A; /* Changed to Soft Violet */
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #D4D4D4; /* Keep this */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #CDC2A5; /* Changed to Light Grey*/
+  color: black; /* Text color on hover */
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+
+
+/* Main Content */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+#main-content {
+  background-color: #070707; /* Ensure dark background */
+  border: 1px solid #333; /* Border for clarity */
+  padding: 20px; /* Consistent padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Ensure each section has similar styles */
+.welcome-section, .about-section, .skills-section {
+  margin-bottom: 20px; /* Space between sections */
+}
+
+
+/* Highlight specific sections */
+#sidebar-header a:hover {
+  color: #8A2BE2; /* Changed to Electric Violet */
+}
+
+#blogs h2, #projects h2, #achievements h2 {
+  color: #8A2BE2; /* Changed to Electric Violet */
+}
+
+#rotatingText {
+  font-size: 20px; /* Size of "I am a" */
+}
+
+#dynamicPhrase {
+  font-size: 22px; /* Larger size for phrases */
+  color: #D10032; /* Changed to Raspberry */
+  transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+.emphasized {
+  font-style: italic;
+  text-transform: uppercase;
+  color: #DA70D6; /* Changed to Soft Violet */
+}
+
+h1{
+  color: #E90074; /* Keep this */
+}
+
+ h2 {
+  color: #61b0ed; /* Keep this */
+}
+
+h3 {
+  color: #F4CE14; /* Keep this */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cccccc; /* Keep this */
+}
+
+a {
+  color: #DA7297; /* Changed to Cyan */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #FABC3F; /* Changed to Yellow */
+}
+
+/* Scrollbars (VS Code style) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Add more scrollbar styles if needed */
+/* Contact social styles */
+.social {
+  color: #00FFFF; /* Changed to Cyan */
+  text-decoration: none;
+}
+
+.social a {
+  color: #00FFFF; /* Ensure link color is set */
+  font-size: 12px; /* Set link text size to small */
+  margin-left: 5px; /* Add space between icon and text */
+}
+
+.social a:hover {
+  text-decoration: underline;
+  color: #DA70D6; /* Changed to Soft Violet */
+}
+
+.social i {
+  font-size: 14px; /* Adjust icon size */
+  vertical-align: middle; /* Align icon with text */
+}
+
+
+/* Project Styles */
+.project {
+  margin-bottom: 20px; /* Space between project sections */
+  background-color: #2a2a2a; /* Slightly darker background for contrast */
+  padding: 20px; /* Add padding inside each project */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition for effects */
+}
+
+.project:hover {
+  background-color: #4b0082; /* Violet color on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project h3 {
+  color: #FF885B; /* Distinct color for project titles */
+  margin-bottom: 10px; /* Space between title and description */
+}
+
+.project p {
+  color: #D4D4D4; /* Light grey for project descriptions */
+  line-height: 1.6; /* Improve readability */
+  margin: 0; /* Reset margin for paragraphs */
+}
+
+/* Certificate Styles */
+.certification {
+  background-color: #252526; /* Background color for the certification cards */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex; /* Use flex to align items */
+  align-items: center; /* Center align items vertically */
+}
+
+.cert-logo {
+  width: 50px; /* Set a fixed width for logos */
+  height: auto; /* Keep aspect ratio */
+  margin-right: 15px; /* Space between logo and text */
+}
+
+.certification p {
+  color: #D4D4D4; /* Text color */
+  margin: 0; /* Remove default margins */
+}
+
+/* Honor Styles */
+.honor {
+  background-color: #2e2e2e; /* Background color for the honor cards */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #D4D4D4; /* Text color */
+  font-size: 16px; /* Font size for honors */
+  position: relative; /* Positioning for the trophy icon */
+}
+
+.honor::before {
+  content: ''; /* Empty content for the icon */
+  position: absolute;
+  left: -30px; /* Position to the left of the text */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact centering */
+  width: 20px; /* Width for icon */
+  height: 20px; /* Height for icon */
+  background-image: url('path/to/trophy-icon.png'); /* Path to trophy icon */
+  background-size: contain; /* Size icon correctly */
+  background-repeat: no-repeat; /* Avoid repeating */
+}
+
+/* Experience Styles */
+.experience-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  gap: 20px; /* Space between blocks */
+  justify-content: space-between; /* Align items evenly */
+}
+
+.experience {
+  flex: 1 1 calc(33% - 20px); /* Responsive blocks, adjust the percentage for the number of columns */
+  background-color: #252526; /* Consistent background */
+  padding: 20px;
+  border-radius: 5px;
+  color: #D4D4D4; /* Text color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+}
+
+.experience h3 {
+  color: #FF8A8A; /* Example color for job titles */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.experience p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+/* Profile Picture Styles */
+.profile-pic-container {
+  display: flex;
+  justify-content: center; /* Center align the image */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.profile-pic {
+  width: 100px; /* Adjust the size */
+  height: 100px;
+  border-radius: 50%; /* Makes the image round */
+  border: 4px solid #3a3f5b; /* Violet border for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a soft shadow */
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+ 
+
+
+/* Main Content */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Aligns children vertically */
+  justify-content: space-between; /* Keeps space between sections */
+  padding: 40px; /* Maintain spacious padding */
+}
+
+#main-content {
+  background-color: #121212; /* Dark background for contrast */
+  border: 1px solid #444; /* Light border */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+ /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes Explore section to the bottom */
+  height: 100%; /* Make it take up the available height */
+}
+
+/* Ensure extra spacing only applies to welcome section */
+.welcome-section {
+  text-align: center; /* Center align the intro text */
+  padding: 40px;
+  margin-bottom: auto; /* Add extra space only below the welcome section */
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  color: #3a3f5b; /* Keep this */
+  margin-bottom: 10px;
+}
+
+#rotatingText {
+  font-size: 20px;
+}
+
+#dynamicPhrase {
+  font-size: 24px;
+  color: #D10032;
+}
+
+.explore-section {
+  background-color: #1e1e1e; /* Distinct background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: auto; /* Ensure it's pushed to the bottom */
+}
+
+.explore-section h3 {
+  font-size: 24px;
+  color: #F4CE14;
+}
+
+.explore-section p {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.emphasized {
+  font-style: italic;
+  text-transform: uppercase;
+  color: #DA70D6;
+}
