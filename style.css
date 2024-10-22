@@ -91,9 +91,6 @@
   color: #8A2BE2; /* Changed to Electric Violet */
 }
 
-#blogs h2, #projects h2, #achievements h2 {
-  color: #8A2BE2; /* Changed to Electric Violet */
-}
 
 #rotatingText {
   font-size: 20px; /* Size of "I am a" */
@@ -115,8 +112,12 @@ h1{
   color: #E90074; /* Keep this */
 }
 
- h2 {
-  color: #61b0ed; /* Keep this */
+/* Container Header Style */
+h2 {
+  color: #d4d4d4; /* Section header color */
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -144,55 +145,98 @@ a:hover {
   width: 12px;
 }
 
-/* Add more scrollbar styles if needed */
-/* Contact social styles */
 .social {
-  color: #00FFFF; /* Changed to Cyan */
-  text-decoration: none;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #d4d4d4; /* Light grey text for dark theme */
 }
 
-.social a {
-  color: #00FFFF; /* Ensure link color is set */
-  font-size: 12px; /* Set link text size to small */
-  margin-left: 5px; /* Add space between icon and text */
-}
-
-.social a:hover {
-  text-decoration: underline;
-  color: #DA70D6; /* Changed to Soft Violet */
+.social p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
 .social i {
-  font-size: 14px; /* Adjust icon size */
-  vertical-align: middle; /* Align icon with text */
+  margin-right: 10px;
+  color: #3498db; /* Icon color */
+  transition: color 0.3s;
+}
+
+.social a {
+  text-decoration: none;
+  color: #569cd6; /* Link color */
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #9cdcfe; /* Lighter blue on hover */
+}
+
+.social i:hover {
+  color: #9cdcfe; /* Change icon color on hover */
 }
 
 
-/* Project Styles */
+
+/* Projects Section Staggered Design */
+.projects-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #1e1e1e; /* VS Code dark background */
+  border-radius: 8px;
+}
+
 .project {
-  margin-bottom: 20px; /* Space between project sections */
-  background-color: #2a2a2a; /* Slightly darker background for contrast */
-  padding: 20px; /* Add padding inside each project */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-  transition: transform 0.3s, background-color 0.3s; /* Smooth transition for effects */
+  background-color: #252526; /* Dark card background */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #569cd6, #9cdcfe, #dcdc9d);
+  transform: rotate(30deg);
+  opacity: 0.15;
+  transition: opacity 0.3s;
+}
+
+.project:hover::before {
+  opacity: 0.3;
 }
 
 .project:hover {
-  background-color: #4b0082; /* Violet color on hover */
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .project h3 {
-  color: #FF885B; /* Distinct color for project titles */
-  margin-bottom: 10px; /* Space between title and description */
+  font-size: 18px;
+  color: #d4d4d4; /* Light grey text */
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
 }
 
 .project p {
-  color: #D4D4D4; /* Light grey for project descriptions */
-  line-height: 1.6; /* Improve readability */
-  margin: 0; /* Reset margin for paragraphs */
+  font-size: 14px;
+  color: #9cdcfe; /* VS Code blue text */
+  z-index: 1;
+  position: relative;
 }
+
 
 /* Certificate Styles */
 .certification {
@@ -348,3 +392,184 @@ a:hover {
   text-transform: uppercase;
   color: #DA70D6;
 }
+
+/* About Section */
+
+.about-container {
+  background-color: #1e1e1e; /* Dark background for a modern look */
+  color: #f5f5f5; /* Light text color for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
+.about-content p {
+  margin: 10px 0;
+  line-height: 1.6; /* Improve line spacing for readability */
+}
+
+.highlight {
+  color: #3498db; /* Accent color for highlights */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+      padding: 15px; /* Adjust padding on smaller screens */
+  }
+}
+
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1e1e1e; /* VS Code dark background */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  background-color: #252526; /* Slightly lighter dark background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 30%;
+  min-width: 250px;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background-color: #333333; /* Highlight on hover */
+}
+
+.icon {
+  font-size: 24px;
+  color: #569cd6; /* VS Code blue color */
+  margin-right: 20px;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #dcdcdc; /* Light grey for headings */
+}
+
+.details p {
+  font-size: 14px;
+  color: #9cdcfe; /* VS Code text color */
+}
+
+
+/* Experience Section */
+.experience-container {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1e1e1e; /* VS Code dark background */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #252526; /* Slightly lighter dark background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 30%;
+  min-width: 250px;
+  transition: transform 0.3s;
+}
+
+.experience:hover {
+  transform: translateY(-5px);
+  background-color: #333333; /* Highlight on hover */
+}
+
+.icon {
+  font-size: 24px;
+  color: #569cd6; /* VS Code blue color */
+  margin-bottom: 10px;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #dcdcdc; /* Light grey for headings */
+}
+
+.details .company {
+  color: #9cdcfe; /* VS Code light blue text */
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.details .role {
+  font-size: 14px;
+  color: #d4d4d4; /* Slightly darker grey for role description */
+}
+
+
+
+/* Blog Section Styling */
+.blog-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #1e1e1e; /* VS Code dark background */
+  border-radius: 8px;
+}
+
+.blog-post {
+  background-color: #252526; /* Dark card background */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.blog-post h3 {
+  font-size: 18px;
+  color: #d4d4d4; /* Light grey text */
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 14px;
+  color: #9cdcfe; /* VS Code blue text */
+  margin-bottom: 15px;
+}
+
+.blog-post a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #569cd6; /* Blue link color */
+  transition: color 0.3s;
+}
+
+.blog-post a:hover {
+  color: #9cdcfe; /* Lighter blue on hover */
+}
+
