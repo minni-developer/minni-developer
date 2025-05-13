@@ -23,7 +23,7 @@
 
 ## ⚡ Skills & Tools
 - **Cybersecurity:** Wireshark, Burp Suite, Splunk
-- **Testing & QA:** Selenium, OWASP ZAP, Postman
+- **Testing & QA:** Manual Testing, OWASP ZAP, Postman, Libsout, Mobsf 
 - **Data Analysis:** Spark, Pandas, Python
 - **Certifications:** [List your relevant certifications here]
 
